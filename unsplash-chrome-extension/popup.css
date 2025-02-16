@@ -1,0 +1,116 @@
+.wrapper {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 10px #000;
+  width: 500px;
+  margin: 0;
+}
+
+.api-input {
+  display: none;
+  padding: 20px;
+  overflow: hidden;
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    input {
+      width: 93%;
+      padding: 13px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #eee;
+    }
+    button {
+      background-color: #0418ab;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      outline: none;
+      border-radius: 5px;
+    }
+  }
+}
+
+.query-input {
+  display: none;
+  .keywords {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    input {
+      padding: 13px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #eee;
+    }
+    button {
+      background-color: #0418ab;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      outline: none;
+      border-radius: 5px;
+    }
+  }
+}
+
+.result {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.image-item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.load-more {
+  display: block;
+  margin: 10px auto;
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.load-more:hover {
+  background-color: #2980b9;
+}

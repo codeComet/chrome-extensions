@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unsplash image</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body class="wrapper">
+    <div class="api-input">
+        <form>
+            <label for="api-key">Enter your Unsplash Access Key first</label>
+            <input name="api-key" id="api-key-input" placeholder="Your Unsplash Access Key...">
+            <button type="submit" id="api-key-submit">Submit</button>
+        </form>
+    </div>
+    <div class="query-input">
+        <form>
+            <div class="keywords">
+                <label for="query-key-input">Enter keywords</label>
+                <input name="query-key-input" id="query-key-input" placeholder="City, Dog, Sunset, Beach...">
+            </div>
+            <div class="keywords">
+                <label>Enter dimension</label>
+                <div class="dimension">
+                    <input placeholder="width" id="width">
+                    <span>X</span>
+                    <input placeholder="height" id="height">
+                </div>
+            </div>
+            <button type="submit" id="search-button">Search</button>
+        </form>
+    </div>
+    <div class="result">
+
+    </div>
+    <script src="main.js"></script>
+    <script src="api.js"></script>
+</body>
+
+</html>
