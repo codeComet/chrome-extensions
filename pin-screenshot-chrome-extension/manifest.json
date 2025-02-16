@@ -1,0 +1,58 @@
+{
+    "manifest_version": 3,
+    "name": "Viewport Capture",
+    "version": "1.0",
+    "description": "Capture and pin a selected area of the viewport.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "commands"
+    ],
+    "commands": {
+        "capture-area": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+X",
+                "mac": "Command+Shift+X"
+            },
+            "description": "Capture the selected area"
+        }
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "html2canvas.min.js",
+                "content.js"
+            ],
+            "css": [
+                "content.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "*.png",
+                "*.jpg",
+                "*.jpeg",
+                "*.gif"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
