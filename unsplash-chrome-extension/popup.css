@@ -1,5 +1,27 @@
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0417ab4d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
 .wrapper {
   padding: 20px;
+  padding-top: 0;
   border-radius: 10px;
   border: none;
   box-shadow: 1px 1px 10px #000;
@@ -7,10 +29,21 @@
   margin: 0;
 }
 
+.welcome {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .api-input {
   display: none;
   padding: 20px;
   overflow: hidden;
+  .service {
+    margin-bottom: 20px;
+    label, p {
+      font-size: 14px;
+    }
+  }
   form {
     display: flex;
     flex-direction: column;
@@ -21,6 +54,9 @@
       border-radius: 5px;
       outline: none;
       border: 1px solid #eee;
+    }
+    label {
+      font-size: 14px;
     }
     button {
       background-color: #0418ab;
@@ -34,12 +70,32 @@
   }
 }
 
+.for-unsplash, .for-pexels {
+  display: none;
+}
+
 .query-input {
   display: none;
+  padding-top: 40px;
   .keywords {
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    button {
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      outline: none;
+      img {
+        width: 20px;
+      }
+    }
   }
   form {
     display: flex;
@@ -95,9 +151,22 @@
   margin: 20px auto;
 }
 
+.dimension {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  input {
+    flex: 1
+  }
+}
+
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .load-more {
@@ -113,4 +182,13 @@
 
 .load-more:hover {
   background-color: #2980b9;
+}
+
+.footer {
+  p{
+    text-align: center;
+    a{
+      text-decoration: underline;
+    }
+  }
 }

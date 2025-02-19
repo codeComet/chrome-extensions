@@ -8,13 +8,41 @@
 
 <body class="wrapper">
     <div class="api-input">
-        <form>
-            <label for="api-key">Enter your Unsplash Access Key first</label>
-            <input name="api-key" id="api-key-input" placeholder="Your Unsplash Access Key...">
-            <button type="submit" id="api-key-submit">Submit</button>
-        </form>
+        <h1 class="welcome">Welcome to Unsplashed!</h1>
+        <div class="service">
+            <p>Which service do you want to use?</p>
+            <div>
+                <input type="radio" id="unsplash" name="service" value="unsplash" checked>
+                <label for="unsplash">Unsplash</label>
+                <input type="radio" id="pexels" name="service" value="pexels">
+                <label for="pexels">Pexels</label>
+            </div>
+        </div>
+        <div class="for-unsplash">
+            <form>
+                <label for="unsplash-api">Enter your Unsplash Access Key first</label>
+                <input name="unsplash-api" id="unsplash-api-input" placeholder="Your Unsplash Access Key...">
+                <button type="submit" id="unsplash-api-submit">Submit</button>
+            </form>
+        </div>
+        <div class="for-pexels">
+            <form>
+                <label for="pexels-api">Enter your Pexels API Key first</label>
+                <input name="pexels-api" id="pexels-api-input" placeholder="Your Pexels API Key...">
+                <button type="submit" id="pexels-api-submit">Submit</button>
+            </form>
+        </div>
     </div>
+
     <div class="query-input">
+        <div class="content">
+            <h2>Search any photo with keywords</h2>
+            <div class="logout">
+                <button id="logout">
+                    <img src="logout.png" alt="logout">
+                </button>
+            </div>
+        </div>
         <form>
             <div class="keywords">
                 <label for="query-key-input">Enter keywords</label>
@@ -32,10 +60,13 @@
         </form>
     </div>
     <div class="result">
-
+        <!-- Search results will appear here -->
+    </div>
+    <div class="footer">
+        <p>Made with <3 by <a href="https://devbishal.netlify.app" target="_blank">Bishal</a></p>
     </div>
     <script src="main.js"></script>
-    <script src="api.js"></script>
+    <!-- Remove the direct script imports for API handlers -->
 </body>
 
 </html>
